@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                         // refreshing recycler view
                         mAdapter.notifyDataSetChanged();
 
+                        // stop animating Shimmer and hide the layout
                         mShimmerViewContainer.stopShimmerAnimation();
                         mShimmerViewContainer.setVisibility(View.GONE);
                     }

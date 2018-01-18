@@ -20,7 +20,6 @@
         android:background="@color/placeholder_bg" />
 
     <View
-        android:id="@+id/placeholder_timestamp"
         android:layout_width="100dp"
         android:layout_height="@dimen/placeholder_text_height"
         android:layout_below="@id/name"
