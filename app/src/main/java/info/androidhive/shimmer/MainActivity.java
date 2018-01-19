@@ -3,7 +3,6 @@ package info.androidhive.shimmer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -26,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private RecyclerView recyclerView;
-    private List<Item> cartList;
-    private CartListAdapter mAdapter;
+    private List<Recipe> cartList;
+    private RecipeListAdapter mAdapter;
 
     private ShimmerFrameLayout mShimmerViewContainer;
 
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler_view);
         cartList = new ArrayList<>();
-        mAdapter = new CartListAdapter(this, cartList);
+        mAdapter = new RecipeListAdapter(this, cartList);
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
@@ -70,12 +69,12 @@ public class MainActivity extends AppCompatActivity {
                             return;
                         }
 
-                        List<Item> items = new Gson().fromJson(response.toString(), new TypeToken<List<Item>>() {
+                        List<Recipe> recipes = new Gson().fromJson(response.toString(), new TypeToken<List<Recipe>>() {
                         }.getType());
 
-                        // adding items to cart list
+                        // adding recipes to cart list
                         cartList.clear();
-                        cartList.addAll(items);
+                        cartList.addAll(recipes);
 
                         // refreshing recycler view
                         mAdapter.notifyDataSetChanged();

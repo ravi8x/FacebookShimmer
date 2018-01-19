@@ -16,9 +16,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.MyViewHolder> {
+public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.MyViewHolder> {
     private Context context;
-    private List<Item> cartList;
+    private List<Recipe> cartList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView name, description, price, chef, timestamp;
@@ -36,7 +36,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.MyView
     }
 
 
-    public CartListAdapter(Context context, List<Item> cartList) {
+    public RecipeListAdapter(Context context, List<Recipe> cartList) {
         this.context = context;
         this.cartList = cartList;
     }
@@ -51,18 +51,18 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.MyView
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
-        final Item item = cartList.get(position);
-        holder.name.setText(item.getName());
-        holder.chef.setText("By " + item.getChef());
-        holder.description.setText(item.getDescription());
-        holder.price.setText("Price: ₹" + item.getPrice());
-        holder.timestamp.setText(item.getTimestamp());
+        final Recipe recipe = cartList.get(position);
+        holder.name.setText(recipe.getName());
+        holder.chef.setText("By " + recipe.getChef());
+        holder.description.setText(recipe.getDescription());
+        holder.price.setText("Price: ₹" + recipe.getPrice());
+        holder.timestamp.setText(recipe.getTimestamp());
 
         Glide.with(context)
-                .load(item.getThumbnail())
+                .load(recipe.getThumbnail())
                 .into(holder.thumbnail);
     }
-
+    // recipe
     @Override
     public int getItemCount() {
         return cartList.size();

@@ -4,7 +4,7 @@ package info.androidhive.shimmer;
  * Created by ravi on 18/01/18.
  */
 
-public class Item {
+public class Recipe {
     int id;
     String name;
     String description;
@@ -13,7 +13,7 @@ public class Item {
     String chef;
     String timestamp;
 
-    public Item() {
+    public Recipe() {
     }
 
     public int getId() {
