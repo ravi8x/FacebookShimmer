@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Shimmer</string>
+    <string name="action_profile">Profile</string>
 </resources>

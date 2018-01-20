@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.androidhive.shimmer.ProfileActivity">
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/placeholder_bg" />
+
+                <View
+                    android:layout_width="200dp"
+                    android:layout_height="@dimen/placeholder_text_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/activity_padding_horizontal"
+                    android:background="@color/placeholder_bg" />
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="@dimen/placeholder_text_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/activity_padding_horizontal"
+                    android:background="@color/placeholder_bg" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_padding_horizontal"
+                android:paddingRight="@dimen/activity_padding_horizontal"
+                android:weightSum="3">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/placeholder_bg" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="@dimen/activity_padding_horizontal"
+                    android:layout_marginRight="@dimen/activity_padding_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/placeholder_bg" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/placeholder_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_padding_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_padding_horizontal"
+                android:paddingRight="@dimen/activity_padding_horizontal"
+                android:weightSum="3">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/placeholder_bg" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="@dimen/activity_padding_horizontal"
+                    android:layout_marginRight="@dimen/activity_padding_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/placeholder_bg" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/placeholder_bg" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</android.support.constraint.ConstraintLayout>
