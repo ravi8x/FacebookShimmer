@@ -56,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(mAdapter);
 
         // making http call and fetching menu json
-        prepareCart();
+        fetchRecipes();
     }
 
     /**
      * method make volley network call and parses json
      */
-    private void prepareCart() {
+    private void fetchRecipes() {
         JsonArrayRequest request = new JsonArrayRequest(URL,
                 new Response.Listener<JSONArray>() {
                     @Override
